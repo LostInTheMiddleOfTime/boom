@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>            
+        @keyframes myani{
+            from{
+                visibility: visible;
+                transform: translate(70vw,-20vh) rotate(30deg);
+
+            }
+            to{
+                transform:  translate(20vw,40vh) rotate(10deg);
+            }
+        }
+        @keyframes myani2{
+            from{
+                transform: translate(70vw,-20vh) rotate(30deg);
+            }
+            98%{
+                transform:  translate(20vw,40vh) rotate(10deg);
+            }
+            to{
+                transform:  translate(20vw,40vh) rotate(10deg);
+                visibility: visible;
+            }
+        }
+        @keyframes myani3{
+            from{
+                visibility: visible;
+                background-image: url(e.png);
+            }
+            88%{
+                background-image: url(e2_3.png);
+            }
+            to{}
+        }
+        body{
+            background-color: rgb(7, 0, 25);
+            margin: 0;
+        }
+        .mtr{
+            animation: myani 2s linear 0.5s 1 normal;
+            visibility: hidden;
+            width: 150px;
+            position: absolute;
+        }
+        .mtr2{
+            animation: myani2 2.05s linear 0.5s 1 normal;
+            visibility: hidden;
+            width: 150px;
+            position: absolute;
+        }
+        .pln{
+            /* animation: myani 10s linear 0.5s 1 normal; */
+            position: absolute;
+            top: 45vh;
+            visibility: hidden;
+            animation: myani3 5s linear 0.5s 1 normal;
+            background-image: url(e2_3.png);
+        }
+    </style>
+</head>
+<body>
+    <img class="mtr2" src="mtr.png">
+    <img class="mtr" src="1_1mtr.png">
+    <img src="-.png" class="pln" width="460px" height="450px">
+</body>
+</html>
